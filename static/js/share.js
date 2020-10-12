@@ -1,5 +1,5 @@
 
-const url = 'https://www.naver.com';
+const url = 'http://13.125.116.49:5000/';
 const title = '[횡성한우] 나와 어울리는 한우 부위는?';
 const hash = '%23횡성한우축제 %23횡성한우성격유형검사 %23성격유형검사 ';
 
