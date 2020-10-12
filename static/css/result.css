@@ -3,57 +3,17 @@
   display: none;
   min-height: 100vh;
   box-shadow: #ddd 0px 0px 10px 5px;
-  background: rgb(252, 252, 252);
+  background: white;
   text-align: center;
   word-break: keep-all;
   opacity: 0;
 }
-#score-box {
-  margin-bottom: 50px;
-}
-#score-box > .title {
-  animation: fade-in 0.6s ease-out 0.4s forwards, 
-          going-down 0.6s ease-out 0.4s forwards;
-  opacity: 0;
-}
-#score-box > .point {
-  margin: 10px 0 50px 0;
-  font-size: 64px;
-  font-size: 4rem;
-  font-weight: bolder;
-  animation: fade-in 0.6s ease-out 1.8s forwards, 
-          going-down 0.6s ease-out 1.8s forwards;
-  opacity: 0;
-}
-.pin {
-  width: 30px; 
-  height: 30px;
-  background-image: url('../img/pin.png');
-  background-size: cover;
-  animation: fade-in 0.5s ease-out 2.6s forwards, 
-          going-down 0.5s ease-out 2.6s forwards;
-  opacity: 0;
-}
-.score-bar {
-  margin: 0 5%;
-  width: 90%;
-  height: 50px;
-  border-radius: 50px;
-  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#6fb7e8+0,855299+50,af3838+100 */
-  background: #6fb7e8; /* Old browsers */
-  background: -moz-linear-gradient(left,  #6fb7e8 0%, #855299 50%, #af3838 100%); /* FF3.6-15 */
-  background: -webkit-linear-gradient(left,  #6fb7e8 0%,#855299 50%,#af3838 100%); /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(to right,  #6fb7e8 0%,#855299 50%,#af3838 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#6fb7e8', endColorstr='#af3838',GradientType=1 ); /* IE6-9 */
-  animation: fade-in 0.5s ease-out 2.5s forwards, 
-          going-down 0.5s ease-out 2.5s forwards;
-  opacity: 0;
-}
+
 .art {
   margin-bottom: 40px;
   width: 100%;
-  height: 200px;
-  max-height: 280px;
+  /*height: 200px;
+  max-height: 280px;*/
   box-shadow: #ddd 0px 0px 10px 5px;
   background-color: #fff;
   animation: fade-in 0.3s ease-out 3.2s both, 
@@ -63,7 +23,7 @@
 .art > img {
   display: block;
   width: 100%;
-  height: 100%;
+  /*height: 100%;*/
   object-fit: contain;
 }
 .desc {
@@ -109,27 +69,28 @@ div.nickname{
   cursor: pointer;
 }
 .tw {
-  background-image: url('../img/tw.svg');
+  background-image: url('../img/twitter_0.png');
 }
 .fb {
-  background-image: url('../img/fb.svg');
+  background-image: url('../img/facebook_0.png');
 }
 .nv {
-  background-image: url('../img/naver.png');
+  background-image: url('../img/naver_0.png');
 }
 .kt {
-  background-image: url('../img/kakaotalk.png');
+  background-image: url('../img/kakaotalk_0.png');
 }
 .btn {
   box-sizing: border-box;
   margin: 0 30% 5px 30%;
   width: 40%;
   height: 50px;
-  line-height: 50px;
+  /*line-height: 50px;*/
   border-radius: 20px;
-  background: rgba(167, 105, 218, 0.7);
-  color: #fff;
-  font-weight: 500;
+  background: white;
+  color:red;
+  border: 2px solid red;
+  font-weight: 600;
   transition: background-color 0.2s ease-in-out;
 }
 .btn:hover {
@@ -230,10 +191,7 @@ div.nickname{
 }
 
 @media all and (min-width: 768px) {
-  #score-box > .point {
-    font-size: 72px;
-    font-size: 4.5rem;
-  }
+ 
   .pin {
     width: 40px; 
     height: 40px;
@@ -285,10 +243,7 @@ div.nickname{
 }
 
 @media all and (min-width: 1024px) {
-  #score-box > .point {
-    font-size: 80px;
-    font-size: 5rem;
-  }
+  
   .pin {
     width: 50px; 
     height: 50px;
@@ -337,10 +292,7 @@ div.nickname{
 }
 
 @media all and (min-width: 1440px) {
-  #score-box > .point {
-    font-size: 88px;
-    font-size: 5.5rem;
-  }
+ 
   .art {
     max-height: 2000px;
   }

@@ -1,4 +1,5 @@
 /* animation */
+/*
 @-webkit-keyframes start-flicker {
   0% {background-color: rgba(0, 135, 245, 0.9);}
   50% {background-color: rgba(0, 135, 245, 0.6);}
@@ -9,6 +10,7 @@
   50% {background-color: rgba(0, 135, 245, 0.6);}
   100% {background-color: rgba(0, 135, 245, 0.9);}
 }
+*/
 @-webkit-keyframes fade-in {
   0% {opacity: 0;}
   100% {opacity: 1;}

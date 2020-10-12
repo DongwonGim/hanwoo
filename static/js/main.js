@@ -1,11 +1,10 @@
-const header = document.getElementById('header');
+/*const header = document.getElementById('header');*/
 const footer = document.getElementById('footer');
 const qna = document.getElementById('qna');
-const u_name = document.querySelector('input[type=text]');
 const wrap = document.getElementById('wrap');
 const tabletMQL = window.matchMedia("all and (min-width: 768px)");
 const pcMQL = window.matchMedia("all and (min-width: 1024px)");
-const ENDPOINT = 10;
+const ENDPOINT = 15;
 const select = [];
 let qIdx = -1;
 
@@ -46,7 +45,7 @@ const goArtist = () => goTo('artist');
 const goShare = () => goTo('share');
 
 const copy = () => {
-  window.open('https://naver.com');
+  window.open('http://www.xn--oi2b37p54dvpag5ag2ag4zbupsvc.com/online_market.php');
 }
 
 const calcScore = () => {
@@ -77,27 +76,27 @@ const goResult = () => {
   const point = calcScore();
   const grade = sortResult(point);
   const pTitle = document.querySelector('.p');
-  const img_url = 'static/img/image-' + grade + '.png';
+  const img_url = 'static/img/result-' + grade + '.png';
   const res_img = document.createElement('img');
   const res_img_div = document.querySelector('.art');
   const animal = document.querySelector('.result');
-  const nickname = document.querySelector('.nickname')
-  const desc = document.querySelector('.res');
+/*  const nickname = document.querySelector('.nickname')
+  const desc = document.querySelector('.res');*/
 
-  pTitle.innerHTML = u_name.value + ' 님에게 어울리는 부위는?';
+  
   res_img.src = img_url;
   res_img.alt = infoList[grade].name;
   res_img.title = infoList[grade].name;
   res_img_div.appendChild(res_img);
-  animal.innerHTML = infoList[grade].name;
-  nickname.innerHTML = infoList[grade].nickname;
-  desc.innerHTML = infoList[grade].desc;
+  /*animal.innerHTML = infoList[grade].name;*/
+  /*nickname.innerHTML = infoList[grade].nickname;*/
+  /*desc.innerHTML = infoList[grade].desc;*/
 
   setTimeout(() => {
-    header.style.display = 'block';
+   /* header.style.display = 'block'; */
     footer.style.display = 'block';
     result.style.display = 'block';
-    header.style.animation =
+    /* header.style.animation =*/
       'fade-in 0.3s forwards';
     footer.style.animation =
       'fade-in 0.3s forwards';
@@ -171,7 +170,7 @@ const goNext = () => {
   const qNum = qnaList[qIdx];
   const q = document.querySelector('.q');
 
-  status.style.width = (ENDPOINT * (qIdx + 1)) + '%';
+  status.style.width = ((100/ENDPOINT) * (qIdx + 1)) + '%';
   q.innerHTML = qNum.q;
   qna.style.animation =
     'fade-in 0.3s ease-in-out 0.4s forwards, ' +
@@ -188,9 +187,9 @@ const goNext = () => {
 
 const begin = () => {
   const welcome = document.getElementById('welcome');
-  header.style.animation =
+  /*header.style.animation =
     'going-up 0.4s forwards, ' +
-    'fade-out 0.4s forwards';
+    'fade-out 0.4s forwards';*/
   footer.style.animation =
     'going-down 0.4s forwards, ' +
     'fade-out 0.4s forwards';
@@ -198,7 +197,7 @@ const begin = () => {
     'going-up 0.4s ease-in-out forwards, ' +
     'fade-out 0.4s ease-in-out forwards', 500);
   setTimeout(() => {
-    header.style.display = 'none';
+    /*header.style.display = 'none';*/
     footer.style.display = 'none';
     welcome.style.display = 'none';
     qna.style.display = 'block';
@@ -214,12 +213,19 @@ const begin = () => {
 }
 
 const load = () => {
-  const msg = document.querySelector('.check-name');
   const start_btn = document.querySelector('.start');
+  start_btn.addEventListener('click', ()=>{
+    start_btn.style.backgroundColor = 'red';
+    start_btn.style.color = 'white';
+    start_btn.disabled = true;
+    begin();
+  
+  });
+
 /*
   u_name.addEventListener('blur', () => {
     try {
-      if (u_name.value.length < 1) {
+      if (u_name.value.length < 0) {
         throw '이름을 입력하고 시작해 주세요.';
       }
       msg.innerHTML = '';
@@ -227,21 +233,21 @@ const load = () => {
       msg.innerHTML = err;
     }
   });
-  */
+  
 
-  start_btn.addEventListener('click', () => {
-    try {
-      if (u_name.value.length < 1) {
-        throw '이름을 입력하고 시작해 주세요.';
-      }
-      msg.innerHTML = '';
-      start_btn.disabled = true;
-      begin();
-    } catch (err) {
-      msg.innerHTML = err;
+ start_btn.addEventListener('click', () => {
+  try {
+    if (u_name.value.length < 0) {
+      throw '이름을 입력하고 시작해 주세요.';
     }
-  });
-
+    msg.innerHTML = '';
+    start_btn.disabled = true;
+    begin();
+  } catch (err) {
+    msg.innerHTML = err;
+  }
+});
+*/
 }
 
 window.onload = load();

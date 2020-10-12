@@ -14,8 +14,8 @@
   <meta property="og:type" content="website">
   <meta property="og:title" content="횡성한우 성격유형 검사">
   <meta property="og:description" content="내 성격과 어울리는 한우 부위는 어딜까?">
-  <meta property="og:image" content="static/img/og-logo.jpg">
-  <meta property="og:url" content="https://dev-dain.github.io/10-things-test/">
+  <meta property="og:image" content="static/img/og-logo2.jpg">
+  <meta property="og:url" content="https://naver.com/">
 
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
@@ -44,80 +44,58 @@
   <script src="static/js/kakao.min.js"></script>
   
   <div id="wrap">
+    <!--
     <header id="header">
       <button class="logo head" onclick=javascript:switchMode()></button>
     </header>
+  -->
     <section id="welcome" class="container">
       <div id="title-box">
         <h1 class="title">
-          횡성한우 성격유형 검사
-          <br><br>
-          <img src="static/img/main_page.jpg">
+          <img src="static/img/main-상단.png">
         </h1>
         
-        <p class="sec-tit">
-          10가지 질문으로<br>
-          알아보는 나와 어울리는 <br>
-          소고기 부위
+<!--        <p class="sec-tit">
         </p>
 
         <span class="time-logo"></span>
-        <div>소요 시간 : 3분 내외</div>
+        <div>소요 시간 : 3분 내외</div>-->
       </div>
-      <hr class="w-line">
-      <p class="w-line">
-        <span id="p-tit">일두백미(一頭百味) 횡성한우</span><br>
-        한우는 무려 120개의 부위로 나누어지고,<br>
-        저마다 다른 풍미와 특징으로 사랑 받고 있죠.<br>
-        <br>
-        만약 내가 횡성한우라면 어떤 부위와 가장 가까울까요?<br>
-        <br>
-        횡성한우 성격유형 검사를 통해<br>
-        지금 나와 가장 맞는 횡성한우 부위를 확인해보세요.<br>
-        검사가 종료되면 횡성한우 특별 할인을 제공합니다.
-      </p>
-      <hr class="w-line">
-      <div id="name-input">
-        <input type="text" placeholder="이름" autofocus>
-      </div>
-      <p class="check-name warning"></p>
+
       <div class="start-wrap">
-        <button class="start">시 작</button>
+        <button class="start">나와 닮은 부위 찾기 시작 > </button>
       </div>
     </section>
     <section id="qna" class="container">
+      <div class="q box"></div>
+      <div class="answer" role="group"></div>
       <div class="status-bar">
         <div class="status"></div>
       </div>
-      <div class="q box"></div>
-      <div class="answer"></div>
     </section>
     <section id="calc">
       <div class="calc-bar">
-        CALCULATING
         <div class="calc"></div>
       </div>
       <p class="wait">잠시 기다려주세요...</p>
     </section>
     <section id="result" class="container">
-      <div id="score-box">
-        <div class="p title"></div>
-        <div class="point"></div>        
-      </div>
       <div id="desc-box">
         <div class="art"></div>
-        <div class="result title"></div>
-        <div class="nickname"></div>
-        <div class="res desc"></div>
         </span>
       </div>
-      <hr>
+      
       <button onclick=javascript:copy() class="btn">30% 할인 받기</button>
       <p>친구들과 공유하기</p>
       
       <div id="share-box">
         <a id="create-kakao-link-btn" href="javascript:;">
-          <span class='kt'></span>
+          <span class='kt' onclick=on_click()></span>
+          <script>
+            function on_click(){
+              document.getElementsByClassName('kt')[0].style.backgroundImage = "url('../static/img/kakaotalk_1.png')";
+            }
+          </script>
         </a>
         </span>
         <a onclick=javascript:tw() target="_blank" alt="Share on Twitter" title="트위터에 공유하기">
@@ -133,7 +111,7 @@
       
       </div>
       
-      <hr>
+      
 
     </section>
     <footer id="footer">
@@ -147,22 +125,23 @@
 
     </footer>
   </div>
-  <script src="static/js/darkmode.js"></script>
   <script src="static/js/data.js"></script>
   <script src="static/js/main.js"></script>
   <script src="static/js/share.js"></script>
  
 
   <script type="text/javascript">
+    
     Kakao.init('f1cb9729c35cce59b5df9fbf23d70629');
     Kakao.Link.createDefaultButton({
+      
       container: '#create-kakao-link-btn',
       objectType: 'feed',
       content: {
-        title: '딸기 치즈 케익',
-        description: '#케익 #딸기 #삼평동 #카페 #분위기 #소개팅',
+        title: '나와 어울리는 한우 부위는?',
+        description: '#횡성한우축제 #횡성한우성격유형검사 #성격유형검사 #한우성격유형',
         imageUrl:
-          'http://k.kakaocdn.net/dn/Q2iNx/btqgeRgV54P/VLdBs9cvyn8BJXB3o7N8UK/kakaolink40_original.png',
+          'static/img/main-상단.png',
         link: {
           mobileWebUrl: 'https://developers.kakao.com',
           webUrl: 'https://developers.kakao.com',

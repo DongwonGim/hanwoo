@@ -23,8 +23,8 @@ a {
   text-decoration: none;
 }
 ::selection {
-  background: #333; 
-  color: rgb(0, 205, 245);
+  background:red; 
+  color: rgb(237, 28, 36);
 }
 button {
   border: none;

@@ -15,27 +15,40 @@
 .status {
   height: 100%;
   border-radius: 20px;
-  background-color: rgba(191, 168, 255, 0.7);
+  background-color:red;;
 }
 .box {
+  color : red;
   margin: 0 auto;
   padding: 20px;
   width: 80%;
-  box-shadow: #ddd 0px 0px 10px 5px;
+  /*box-shadow: #ddd 0px 0px 10px 5px;*/
   border-radius: 20px;
-  background: rgb(252, 252, 252);
+  background: white;
+}
+.q.box {
+  text-align: center;
+  width: 100%;
+}
+.a.box {
+  text-align:center;
+  border : 2px solid red;
+  /*float : left;*/
+  margin : 20px 10% 0 10%
 }
 .q {
   box-sizing: border-box;
   margin-bottom: 30px;
   font-size: 27.2px;
-  font-size: 1.7rem;
+  font-size: 1.5rem;
   font-weight: bolder;
   animation: fade-in 0.5s ease-in-out 0.3s forwards;
   opacity: 0;
 }
 .answer {
-  width: 100%;
+  width: 80%;
+  height: 30rem;
+  margin : 0 auto;
 }
 .a {
   margin: 20px 10% 0 10%;
@@ -64,12 +77,21 @@
     height: 20px;
   }
   .box {
+    color : red;
     margin: 0 auto;
-    padding: 30px;
+    padding: 20px;
     width: 80%;
-    box-shadow: #ddd 0px 0px 10px 5px;
+    /*box-shadow: #ddd 0px 0px 10px 5px;*/
     border-radius: 20px;
-    background: rgb(252, 252, 252);
+    background:white;
+  }
+  
+  .a.box {
+    text-align:center;
+    margin : 20px 10% 0 10%;
+    border : 2px solid red;
+    /*float:left;*/
+    /*height: 10rem;*/
   }
   .q {
     margin: 0 auto;
@@ -78,15 +100,16 @@
     font-size: 2rem;
   }
   .answer {
-    margin: 0 10%;
-    width: 80%;
+    position:relative;
+    margin: 0 auto;
+    width: 80%; /* 조심 */
     font-size: 24px;
     font-size: 1.5rem;
   }
   .a {
     margin: 15px 0;
     padding: 20px 30px;
-    width: 100%;
+    width: 80%;
     font-size: 20.8px;
     font-size: 1.3rem;
   }
@@ -94,7 +117,8 @@
 
 @media all and (min-width: 1024px) {
   .status-bar {
-    margin: 0px 15% 40px 15%;
+    margin: 0 0 40px 0;
+    width: 100%;
   }
   .q {
     margin-bottom: 80px;
@@ -102,12 +126,14 @@
     font-size: 2.5rem;
   }
   .answer {
+    position:relative;
+    margin: 0 auto;
     font-size: 28.8px;
     font-size: 1.8rem;
   }
   .a {
     padding: 25px 35px;
-    width: 100%;
+    width: 80%;
     font-size: 22.4px;
     font-size: 1.4rem;
   }
@@ -115,8 +141,8 @@
 
 @media all and (min-width: 1440px) {
   .status-bar {
-    margin: 0 5% 40px 5%;
-    width: 90%;
+    margin: 0px 0 40px 0;
+    width: 100%;
   }
   .q {
     margin-bottom: 80px;
@@ -124,10 +150,16 @@
     font-size: 40px;
     font-size: 2.5rem;
   }
-  .answer {
-    margin: 0;
-    width: 100%;
+  .answser {
+    margin: 0 auto;
+    position:relative;
     font-size: 28.8px;
     font-size: 1.8rem;
+  }
+  .a {
+    padding: 25px 35px;
+    width: 80%;
+    font-size: 22.4px;
+    font-size: 1.4rem;
   }
 }

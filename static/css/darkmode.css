@@ -57,6 +57,11 @@ hr {
   color: rgb(0, 205, 245);
   font-weight: bolder;
 }
+
+#welcome > .start {
+  background-color : black;
+}
+
 #footer {
   box-shadow: #000 0 0 15px 2px;
   background: #111;
